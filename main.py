@@ -90,6 +90,7 @@ def visualise_data(json_data=''):
         y1 = list(map(float, temps_17))
         pplt.figure(figsize=(12, 14))
         pplt.subplot(2, 1, 1)
+
         weather17 = pplt.scatter(dates, y1)
         pplt.title('Weather changes in Saint-Petersburg (17.12.22 - 21.12.22)')
         pplt.xlabel('Times[Last 5 days]');
@@ -110,11 +111,11 @@ def visualise_data(json_data=''):
         weather20 = pplt.scatter(dates, y4)
 
         pplt.legend((weather17, weather18, weather19, weather20),
-                   ('17.12.2022', '18.12.2022', '19.12.2022', '20.12.2022'),
-                   scatterpoints=1,
-                   ncol=1,
-                   fontsize=8,
-                    bbox_to_anchor = (1 , 1))
+                    ('17.12.2022', '18.12.2022', '19.12.2022', '20.12.2022'),
+                    scatterpoints=1,
+                    ncol=1,
+                    fontsize=8,
+                    bbox_to_anchor=(1, 1))
 
         # temps_21 = np.array([_t['temp'] for _t in data["1671599717"][:]])
         # y5 = list(map(float, temps_21))
