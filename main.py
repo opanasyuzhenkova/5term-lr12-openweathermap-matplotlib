@@ -6,7 +6,7 @@ import pandas as pd
 import json
 import requests
 
-key = "26f1cc6b039373fdded0b5855a718b65"
+
 def get_data(i):
     today = datetime.datetime.today()
     one_day = datetime.timedelta(days=i)
