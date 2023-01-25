@@ -6,7 +6,7 @@ import pandas as pd
 import json
 import requests
 
-
+key = "26f1cc6b039373fdded0b5855a718b65"
 def get_data(i):
     today = datetime.datetime.today()
     one_day = datetime.timedelta(days=i)
@@ -19,7 +19,7 @@ def get_weather(api_key=None) -> str:
 
     city, lat, lon = "Saint Petersburg, RU", 59.57, 30.19
     result = dict()
-    for i in range(1, 6):
+    for i in range(5, 0, -1):
         if api_key:
             req = requests.get(
                 f'http://api.openweathermap.org/data/2.5/'
